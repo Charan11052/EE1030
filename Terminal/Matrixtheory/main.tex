@@ -1,0 +1,263 @@
+
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{\textbf{Assignment-1}}
+\author{EE24BTECH11052 - RONGALI CHARAN}
+\maketitle
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\onecolumn
+\setlength{\columnsep}{2.5em}
+\section*{SECTION-A}
+\section*{JEE ADVANCED}
+\begin{enumerate}
+\subsection*{E - Subjective Problems}
+    \item If $f(x-y)=f(x).g(y)-f(y).g(x)$ and $ g(x-y)=g(x).g(y)-f(x).f(y) $ for all $x,y \in R $ . If right hand derivative at $x=0$ exists for $f(x)$. Find Derivative of $g(x)$ at $x=0$
+   \hfill(2005 - 4 Marks)
+\end{enumerate}
+\begin{enumerate}
+\subsection*{F - Match the Following}
+		 \item In this question there are entries in columns I and II. Each entry in Column I is related to exactly one entry in Column II. Write the correct letter from Column II against the entry number in Column Iin your answer book.      \hfill(2009 - 4 Marks)
+			\begin{multicols}{2}
+                 \textbf{Column I}
+				\begin{enumerate}
+					\item	$\sin{(\pi\sbrak{x})}$
+					\item $\sin{(\pi(x-\sbrak{x}))}$
+				\end{enumerate}
+			\columnbreak
+                 \textbf{Column II}
+				\begin{enumerate}
+					\item  differentiable everywhere 
+						
+					\item  nowhere differentiable
+
+					\item  not differentiable at $1$ and $-1$ 
+						
+				\end{enumerate}
+				\end{multicols}
+			\item In the following $[x]$ denotes the greatest integer less than or equal to $ x$. Match the functions in Column I with the properties in column II and indicate your answer by darkening the appropriate bubbles in the $4\times4$ matrix given in ORS.
+                  \hfill(2007 - 6 Marks)
+			\begin{multicols}{2}
+				\textbf{Column I}
+
+				\begin{enumerate}
+					\item  $x\abs{x}$ 
+					\item  $\sqrt{\abs{x}}$ 
+					\item $x+\sbrak{x}$ 
+					\item  $\abs{x-1}+\abs{x+1}$
+				\end{enumerate}
+			\columnbreak
+				\textbf{Column II}
+				\begin{enumerate}
+					\item  continuous in $(-1,1)$
+
+					\item differentiable in $(-1,1)$
+
+					\item strictly increasing in $(-1,1)$
+
+					\item  not differentiable atleast at one point in  $(-1,1)$
+				\end{enumerate}
+			\end{multicols}
+		\item Let $f_1:R\to R$ $f_2:[0,\infty)\to R$ $f_3:R\to R$ $f_4:[0,\infty)\to R$ be defined by
+		$$f_1(x)=
+        \begin{cases}
+		\abs{x} & \text{if } x < 0 \\
+                 e^x & \text{if } x \geq 0 
+                 \end{cases};$$
+		 $$f_2(x)=x^2;$$
+		 $$f_3(x) =
+                 \begin{cases}
+			 \sin{x} & \text{if }  x < 0 \\
+                    \ x & \text{if }  x\geq 0
+                  \end{cases};$$
+	        $$f_4(x) =
+                  \begin{cases}
+                     f_2(f_1(x)) & \text{if } x < 0 \\
+                     f_2(f_1(x))-1 & \text{if } x \geq 0 
+                  \end{cases}.$$
+                  \hfill(JEE Adv. 2014)
+                 \begin{multicols}{2} 
+				\textbf{List-I} 
+				\begin{enumerate}[label=\Alph*., start=16]
+					\item $f_4$ is
+					\item $f_3$ is 
+					\item $f_2$o$f_1$ is 
+					\item $f_2$ is
+				\end{enumerate}
+				\columnbreak
+				\textbf{List-II}
+				\begin{enumerate}[label=\arabic*.]
+					\item  Onto but not one-one 
+
+					\item  Neither continuous nor one-one 
+
+					\item  Differentiable but not one-one 
+
+					\item  Continuous and one-one
+				\end{enumerate}
+		\end{multicols}
+			\textbf{   P Q R S}
+			\begin{enumerate}[label=(\alph*)]
+				\item $ 3 1 4 2$
+				\item$ 3 1 2 4$
+				\item $1 3 4 2$ 
+				\item $1 3 2 4$
+			\end{enumerate}
+            \item Let $f_1: \textbf{R}\to \textbf{R},f_2:(-\frac{\pi}{2},\frac{\pi}{2})\to \textbf{R}, f_3:(-1,e^\frac{\pi}{2}-2)\to \textbf{R}$ and $f_4: \textbf{R}\to \textbf{R}$ be defined by \\
+            1. $f_1(x)=\sin({\sqrt{1-e^{-x^2}}})$, \\
+            2. $f_2(x) =
+             \begin{cases}
+		 \frac{\abs{\sin{x}}}{\tan^{-1}x} & \text{if } x \neq 0 \\
+                 e^x & \text{if } x = 0 
+                 \end{cases}$,where the inverse trigonometric function $\tan^{-1}x $ assumes value in $(-\frac{\pi}{2},\frac{\pi}{2})$,\\
+            3. $f_3(x)=[\sin({log_e(x+2)})]$,where, for $t\in \textbf{R}$, $[t]$ denotes the greatest integer less than or equal to t, \\
+            4.$f_4(x) =
+        \begin{cases}
+                 x^2\sin{\frac{1}{x}} & \text{if } x \neq 0 \\
+                 0 & \text{if } x = 0 
+                 \end{cases}$ .
+                 \begin{multicols}{2} 
+				\textbf{List-I} 
+				\begin{enumerate}[label=\Alph*., start=16]
+					\item The function $f_1$ is
+					\item The function $f_2$ is 
+					\item The function $f_3$ is 
+					\item The function $f_4$ is
+				\end{enumerate}
+				\columnbreak
+				\textbf{List-II}
+				\begin{enumerate}[label=\arabic*.]
+					\item  NOT continuous at $x = 0$ 
+					\item  continuous at $x = 0$ and NOT differentiable at $x = 0$
+					\item differentiable at $x = 0$ and its derivative is NOT continuous at $x = 0$
+					\item differentiable at $x = 0$ and its derivative is continuous at $x = 0$
+				\end{enumerate}
+                 \hfill(JEE Adv. 2018)
+		\end{multicols}
+			\begin{enumerate}
+				\item $P\to2;Q\to3;R\to1;S\to4$
+				\item $P\to4;Q\to2;R\to1;S\to3$
+				\item $P\to4;Q\to1;R\to2;S\to3$
+				\item $P\to2;Q\to1;R\to4;S\to3$
+			\end{enumerate}
+\end{enumerate}
+\begin{enumerate}
+\subsection*{ I - Integer Value Correct Type }
+    \item Let $f:[1,\infty)\to [2,\infty)$ be a differentiable function such that $f(1)=2$. If 6$\int_1^x f(t)dt = 3xf(x)-x^3$ for all $x\geq1$. Then the value of $f(2)$ is 
+    \hfill(2011)
+   \item The largest value of non-negative integer a for which $$\lim_{x \to 1}\{\frac{-ax+\sin{(x-1)}+a}{x+\sin{(x-1)}-1}\}^{\frac{1-x}{1-\sqrt{x}}} = \frac{1}{4}$$ 
+ \hfill(JEE Adv. 2014)
+    \item Let $f:R\to R$ and $g:R\to R$ be respectively given by $f(x)=\abs{x}+1$ and $g(x)=x^2+1$. Define $h:R\to R$ by
+    $$h(x) =
+\begin{cases}
+    $max{f(x),g(x)}$ & \text{if } x \leq 0 \\
+    $min{f(x),g(x)}$ & \text{if } x > 0 
+\end{cases}.$$
+The number of points at which $h(x)$ is not differentiable is 
+\hfill(JEE Adv. 2014)
+    \item Let $m$ and $n$ be two positive integers greater than 1. If $$\lim_{\alpha\to 0}(\frac{e^{\cos{(\alpha^n)}}-e}{\alpha^m}) = - (\frac{e}{2})$$ then the value of $\frac{m}{n}$ is 
+    \hfill(JEE Adv. 2015)
+    \item Let $ \alpha,\beta \in \textbf{R}$ be such that $$\lim_{x \to 0}{\frac{x^2\sin{(\beta x)}}{\alpha x-sinx}} = 1$$. Then $6(\alpha + \beta)$ equals. 
+    \hfill(JEE Adv. 2016)
+\end{enumerate}
+\section*{SECTION-B}
+\section*{JEE MAIN/AIEEE}
+\begin{enumerate}
+    \item $\lim_{x\to 0}{\frac{\sqrt{1-\cos{2x}}}{\sqrt{2}x}}$ is
+	    \hfill[2002]
+    \begin{enumerate}
+			\item $1$
+			\item $-1$
+			\item $0$
+			\item does not exist
+		\end{enumerate}
+    \item  $\lim_{x\to \infty}({\frac{x^2+5x+3}{x^2+x+3}})^x$
+	    \hfill[2002]
+    \begin{enumerate}
+			\item $e^4$
+			\item $e^2$
+			\item $e^3$
+			\item $1$
+		\end{enumerate}
+    \item Let $f(x)=4$ and $f'(x)=4$. Then $\lim_{x\to 2}{\frac{xf(2)-2f(x)}{x-2}}$ is given by
+	    \hfill[2002]
+    \begin{enumerate}
+			\item $2$
+			\item $-2$
+			\item $-4$
+			\item $3$
+		\end{enumerate}
+    \item $\lim_{n\to \infty}{\frac{1^p+2^p+3^p+\dots+n^p}{n^{p+1}}}$ is
+	    \hfill[2002]
+    \begin{enumerate}
+			\item $\frac{1}{p+1}$
+			\item $\frac{1}{1-p}$
+			\item $\frac{1}{p}-\frac{1}{p-1}$
+			\item $\frac{1}{p+2}$
+		\end{enumerate}
+	\item $\lim_{x\to 0}{\frac{\log x^n- \sbrak{x}}{\sbrak{x}}}, n\in N$, ( $\sbrak{x}$ denotes greatest integer less than or equal to x)
+	    \hfill[2002]
+    \begin{enumerate}
+			\item has value $-1$
+			\item has value $0$
+			\item has value $1$
+			\item does not exist
+		\end{enumerate}
+
+\end{enumerate}
+
+\end{document}                
