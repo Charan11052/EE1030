@@ -73,18 +73,20 @@ The equation of conic $g(x)$ is given by :
 \begin{align}
 	g(x) &= \vec{x}^\top \vec{V}\vec{x}+2\vec{u}^\top \vec{x}+f=0\\
 	\vec{V} &= \myvec{1 & 0\\0 & 1}\\
-	\vec{u} &= 0 \\
-	f &= -16
+	\vec{u} &= \myvec{0 \\ 0} \\
+	f &= -16\\
+	L: \vec{x} &= \vec{h}+k\vec{m} \\
+	\vec{h} &= \myvec{x \\ 0}\\
+	\vec{m} &= \myvec{1 \\ 0}\\
+	\vec{x_i} &= \vec{h}+k_{i}\vec{m}
        \end{align}
-       as we know x-axis is representes as :
 \begin{align}
-	\vec{h} &= \myvec{x \\ 0}
+	k_1 &= \frac{1}{\vec{m}^\top \vec{V}\vec{m}}\brak{-m^\top\brak{\vec{V}\vec{h}+\vec{u}}+ \sqrt{[\vec{m}^\top \brak{\vec{V}\vec{h}+\vec{u}}]^2 - g(\vec{h})\brak{\vec{m}^\top\vec{V}\vec{m}}}} = -x+4 \\
+	k_2 &= \frac{1}{\vec{m}^\top \vec{V}\vec{m}}\brak{-m^\top\brak{\vec{V}\vec{h}+\vec{u}}- \sqrt{[\vec{m}^\top \brak{\vec{V}\vec{h}+\vec{u}}]^2 - g(\vec{h})\brak{\vec{m}^\top\vec{V}\vec{m}}}} = -x-4
 \end{align}
-for finding point of intersection of conic with the line $g(\vec{h})=0$.\\
-by solving we get two values of $\vec{x_1}$ and $\vec{x_2}$ as :
 \begin{align}
-	\vec{A} &= \myvec{4 \\0}\\
-	\vec{B} &= \myvec{-4\\0}
+	\vec{x_1} &= \myvec{4 \\0}\\
+	\vec{x_2} &= \myvec{-4\\0}
 \end{align}
 The area bounded by the curve $y = 16-x^2$ and $x$-axis is given by:
 \begin{align}
