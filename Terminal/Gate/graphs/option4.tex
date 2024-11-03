@@ -1,0 +1,33 @@
+
+\usetikzlibrary{decorations.markings, arrows.meta}
+
+\tikzset{
+    midar/.style={
+        very thick,
+        decoration={
+            markings,
+            mark=at position 0.5 with {\arrow{Latex}}, % Arrow at the midpoint
+        },
+        postaction=decorate,
+    },
+}
+
+\begin{tikzpicture}[thick, scale=0.75, every node/.style={scale=0.75}]
+    % Arrows and lines
+    \draw [->, >=Stealth] (7.5,13.5) -- (7.5,16.75);
+    \draw [->, >=Stealth] (7.5,13.5) -- (10.75,13.5);
+    \draw [line width=0.9pt, ->, >=Stealth] (9.5,16.25) -- (10,16.25);
+    \draw [line width=0.9pt, short] (10,16.25) -- (10.25,16.25);
+    \draw [line width=0.9pt, ->, >=Stealth] (10.25,16.25) .. controls (10.5,15.25) and (10,15) .. (9.75,14.75) ;
+    \draw [line width=1pt, short] (9.75,14.75) .. controls (9.25,14.5) and (9.25,14.25) .. (8.75,14.25);
+    \draw [line width=0.9pt, ->, >=Stealth] (8.75,14.25) .. controls (9.5,15) and (9.5,15.25) .. (9.5,15.75) ;
+    \draw [line width=0.9pt, short] (9.5,15.75) -- (9.5,16.25);
+
+    % Node Labels
+    \node [font=\small] at (10.5,16.5) {1};
+    \node [font=\small] at (8.5,14) {2};
+    \node [font=\small] at (9.25,16.5) {3};
+    \node [font=\normalsize] at (7.5,17.25) {T};
+    \node [font=\normalsize] at (11,13.5) {S};
+\end{tikzpicture}
+

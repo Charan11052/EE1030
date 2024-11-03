@@ -1,0 +1,32 @@
+
+\usetikzlibrary{decorations.markings, arrows, arrows.meta}
+
+\tikzset{
+    midar/.style={
+        very thick,
+        decoration={
+            markings,
+            mark=at position 0.55 with {\arrow{latex}}, % Arrow only at the midpoint
+        },
+        postaction=decorate,
+    },
+}
+
+\begin{tikzpicture}[thick]
+    % Shortened Axes
+    \draw[-{Latex}] (0,0) -- (0,3.5) node[above] {$T$};
+    \draw[-{Latex}] (0,0) -- (4.5,0) node[right] {$S$};
+
+    % Points and labels
+    \node at (1,3) [above left] {3};
+    \node at (1,1) [below left] {1};
+    \node at (3,1) [below right] {2};
+
+    
+   \draw[midar] (1,3) -- (1,1); 
+
+    % Hyperbolic curve from 3 to 1
+    \draw[midar] plot[domain=1:3, samples=100] (\x, {1/\x});
+    \draw[midar] plot[domain=3:1, samples=100] (\x, {3/\x^(1.9)});
+\end{tikzpicture}
+

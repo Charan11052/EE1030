@@ -1,0 +1,68 @@
+\usetikzlibrary{decorations.markings, arrows.meta}
+
+\begin{tikzpicture}[thick, scale=0.75, every node/.style={scale=0.75}]
+    % Horizontal lines
+    \draw [line width=0.2pt] (3,10.5) to[short] (9.75,10.5);
+    \draw [line width=0.2pt] (3,7.75) to[short] (10,7.75);
+    \draw [line width=0.2pt] (3,10.5) to[short] (3,7.75);
+    \draw [line width=0.2pt] (2.25,10.5) to[short] (2.25,7.75);
+    
+    % Arrows
+    \draw [line width=0.2pt, ->, >=Stealth] (2.25,10.5) -- (3,10.5);
+    \draw [line width=0.2pt, ->, >=Stealth] (2.25,10) -- (3,10);
+    \draw [line width=0.2pt, ->, >=Stealth] (2.25,9.5) -- (3,9.5);
+    \draw [line width=0.2pt, ->, >=Stealth] (2.25,9) -- (3,9);
+    \draw [line width=0.2pt, ->, >=Stealth] (2.25,8.25) -- (3,8.25);
+    \draw [line width=0.2pt, ->, >=Stealth] (2.25,7.75) -- (3,7.75);
+    
+    % Vertical lines
+    \draw [line width=0.2pt] (7,10.5) to[short] (7,7.75);
+    \draw [line width=0.2pt] (8,10.5) to[short] (8,7.75);
+    
+    % Dashed lines
+    \draw [line width=0.2pt, ->, >=Stealth, dashed] (7,10) -- (8,10);
+    \draw [line width=0.2pt, short] (7,10.5) -- (8,10);
+    \draw [line width=0.2pt, ->, >=Stealth, dashed] (7,8.25) -- (8,8.25);
+    \draw [line width=0.2pt, short] (8,8.25) -- (7,7.75);
+    
+    % Additional lines
+    \draw [line width=0.2pt] (8,10) to[short] (8.75,10);
+    \draw [line width=0.2pt] (8,8.25) to[short] (8.75,8.25);
+    
+    % Double arrows
+    \draw [line width=0.2pt, <->, >=Stealth] (8.75,10.5) -- (8.75,10);
+    \draw [line width=0.2pt, <->, >=Stealth] (8.75,8.25) -- (8.75,7.75);
+    \draw [line width=0.2pt, <->, >=Stealth] (9.75,10.5) -- (9.75,7.75);
+    
+    % Output arrow
+    \draw [->, >=Stealth] (10,7.75) -- (11.25,7.75);
+    
+    % Node Labels
+    \node [font=\LARGE] at (11.25,7.25) {x};
+    \node [font=\normalsize] at (9.5,9.25) {H};
+    \node [font=\normalsize] at (9,10.25) {$\delta$};
+    \node [font=\normalsize] at (9,8) {$\delta$};
+    
+    % Lines connecting V_m and A/B
+    \draw [->, >=Stealth] (7,8.75) -- (8,8.75);
+    \draw [line width=0.2pt, ->, >=Stealth] (7,9.25) -- (8,9.25);
+    \node [font=\normalsize] at (7.5,9.5) {$V_m$};
+    \node [font=\normalsize] at (2.5,9.75) {$u_o$};
+    
+    % More arrows and node labels
+    \draw [line width=0.2pt, ->, >=Stealth] (7,9.75) -- (8,9.75);
+    \draw [line width=0.2pt, ->, >=Stealth] (3,10.5) -- (3,11.25);
+    \node [font=\large] at (3,7.5) {A};
+    \node [font=\large] at (8,7.5) {B};
+    
+    % Dashed connecting lines
+    \draw [line width=0.2pt, dashed] (3,7.75) -- (3.25,8);
+    \draw [line width=0.2pt, dashed] (3.25,8) -- (3.5,8);
+    \draw [line width=0.2pt, dashed] (3.5,8) -- (7,8.25);
+    \draw [line width=0.2pt, dashed] (3,10.5) -- (7,10);
+    
+    % Label for Y
+    \node [font=\large] at (2.5,11) {Y};
+
+\end{tikzpicture}
+
