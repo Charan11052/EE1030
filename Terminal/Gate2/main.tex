@@ -1,0 +1,224 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{multicol}
+\usepackage[latin1]{inputenc}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv} 
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows} 
+
+%\def\inputGnumericTable{}                                
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\newcommand{\rupee}{\text{Rs.}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{\textbf{2024-DA-1-13}}
+\author{EE24BTECH11052 - RONGALI CHARAN}
+\maketitle
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\columnsep}{2.5em}\begin{enumerate}
+\item If \textquoteleft{} $\rightarrow$ \textquoteright{} denotes increasing order of intensity, then the meaning of the words
+\texttt{[sick $\rightarrow$ infirm $\rightarrow$ moribund]} is analogous to \texttt{[silly $\rightarrow$ \_\_\_\_\_ $\rightarrow$ daft]}.
+
+Which one of the given options is appropriate to fill the blank?
+
+\begin{enumerate}
+    \item frown
+    \item fawn
+    \item vein
+    \item vain
+\end{enumerate}
+\item The 15 parts of the given figure are to be painted such that no two adjacent parts with shared boundaries (excluding corners) have the same color. The minimum number of colors required is:
+	\begin{center}
+		\input{figures/fig1}
+	\end{center}
+
+\begin{enumerate}
+    \item 4
+    \item 3
+    \item 5
+    \item 6
+\end{enumerate}
+\item How many 4-digit positive integers divisible by 3 can be formed using only the digits \{1, 3, 4, 6, 7\}, such that no digit appears more than once in a number?
+\begin{enumerate}
+    \item 24
+    \item 42
+    \item 78
+    \item 12
+\end{enumerate}
+\item The sum of the following infinite series is
+$$2 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{8} + \frac{1}{9} + \frac{1}{16} + \frac{1}{27} + \dots $$
+\begin{enumerate}
+     \item $\frac{11}{3}$
+     \item $\frac{7}{2}$
+     \item $\frac{13}{4}$
+     \item $\frac{9}{2}$
+\end{enumerate}
+\item In an election, the share of valid votes received by the four candidates A, B, C, and D is represented by the pie chart shown. The total number of votes cast in the election were 1,15,000, out of which 5,000 were invalid.
+\begin{center}
+	\input{figures/fig2}
+\end{center}
+Based on the data provided, the total number of valid votes received by the candidates B and C is:
+
+\begin{enumerate}
+    \item 45,000
+    \item 49,500
+    \item 51,750
+    \item 54,000
+\end{enumerate}
+\item Thousands of years ago, some people began dairy farming. This coincided with a number of mutations in a particular gene that resulted in these people developing the ability to digest dairy milk.//
+
+
+Based on the given passage, which of the following can be inferred?
+\begin{enumerate}
+    \item All human beings can digest dairy milk.
+    \item No human being can digest dairy milk.
+    \item Digestion of dairy milk is essential for human beings.
+    \item In human beings, digestion of dairy milk resulted from a mutated gene.
+\end{enumerate}
+\item The probability of a boy or a girl being born is $ \frac{1}{2} $. For a family having only three children, what is the probability of having two girls and one boy?
+\begin{enumerate}
+    \item $ \frac{3}{8} $
+    \item $ \frac{1}{8} $
+    \item $ \frac{1}{4} $
+    \item $ \frac{1}{2} $
+\end{enumerate}
+\item Person 1 and Person 2 invest in three mutual funds A, B, and C. The amounts they invest in each of these mutual funds are given in the table.\\
+	\input{table/table}\\
+At the end of one year, the total amount that Person 1 gets is \rupee500 more than Person 2. The annual rate of return for the mutual funds B and C is 15\% each. What is the annual rate of return for the mutual fund A?
+
+\begin{enumerate}
+    \item $7.5\%$
+    \item $10\%$
+    \item $15\%$
+    \item $20\%$
+\end{enumerate}
+\item Three different views of a dice are shown in the figure below.\\
+\noindent % To remove indentation for the first figure
+\begin{minipage}{0.33\textwidth}
+    \centering
+    \input{figures/fig3.tex}  % Include the first figure code
+\end{minipage}%
+\begin{minipage}{0.33\textwidth}
+    \centering
+    \input{figures/fig4.tex}  % Include the second figure code
+\end{minipage}%
+\begin{minipage}{0.33\textwidth}
+    \centering
+    \input{figures/fig5.tex}  % Include the third figure code
+\end{minipage}\\
+The piece of paper that can be folded to make this dice is
+\begin{enumerate}
+	\item \input{figures/option1.tex}
+	\item \input{figures/option2.tex}
+	\item \input{figures/option3.tex}
+	\item \input{figures/option4.tex}
+	\end{enumerate}
+\item Visualize two identical right circular cones such that one is inverted over the other and they share a common circular base. If a cutting plane passes through the vertices of the assembled cones, what shape does the outer boundary of the resulting cross-section make?
+\begin{enumerate}
+    \item A rhombus
+    \item A triangle
+    \item An ellipse
+    \item A hexagon
+\end{enumerate}
+\item Consider the following statements:
+\begin{itemize}
+	\item (i) The mean and variance of a Poisson random variable are equal.
+	\item (ii) For a standard normal random variable, the mean is zero and the variance is one.
+\end{itemize}
+Which ONE of the following options is correct?
+
+\begin{enumerate}
+    \item  Both (i) and (ii) are true
+    \item  (i) is true and (ii) is false
+    \item  (ii) is true and (i) is false
+    \item  Both (i) and (ii) are false
+\end{enumerate}
+\item Three fair coins are tossed independently. T is the event that two or more tosses result in heads. S is the event that two or more tosses result in tails. What is the probability of the event $T \cap S$?
+
+\begin{enumerate}
+    \item  0
+    \item  0.5
+    \item  0.25
+    \item  1
+\end{enumerate}
+\item Consider the matrix $\vec{M} &=  \myvec{2 & -1\\3 & 1}$\\
+Which ONE of the following statements is TRUE?
+
+\begin{enumerate}
+    \item  The eigenvalues of $\vec{M}$ are non-negative and real.
+    \item  The eigenvalues of $\vec{M}$ are complex conjugate pairs.
+    \item  One eigenvalue of $\vec{M}$ is positive and real, and another eigenvalue of $\vec{M}$ is zero.
+    \item  One eigenvalue of $\vec{M}$ is non-negative and real, and another eigenvalue of $\vec{M}$ is negative and real.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+
+
+
+\end{document}
