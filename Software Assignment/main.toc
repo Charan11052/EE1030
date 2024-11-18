@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {I}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {II}Gram-Schmidt Process}{1}{section.2}%
+\contentsline {subsection}{\numberline {\mbox {II-A}}Steps}{1}{subsection.2.1}%
+\contentsline {section}{\numberline {III}QR Decomposition}{2}{section.3}%
+\contentsline {subsection}{\numberline {\mbox {III-A}}Definition}{2}{subsection.3.1}%
+\contentsline {section}{\numberline {IV}Eigenvalue Computation Using QR Algorithm}{2}{section.4}%
+\contentsline {subsection}{\numberline {\mbox {IV-A}}Overview}{2}{subsection.4.1}%
+\contentsline {subsection}{\numberline {\mbox {IV-B}}Algorithm Steps}{2}{subsection.4.2}%
+\contentsline {subsection}{\numberline {\mbox {IV-C}}Convergence Criterion}{3}{subsection.4.3}%
+\contentsline {section}{\numberline {V}Convergence Criteria in the QR Algorithm}{3}{section.5}%
+\contentsline {subsection}{\numberline {\mbox {V-A}}Tolerance Threshold}{3}{subsection.5.1}%
+\contentsline {subsection}{\numberline {\mbox {V-B}}Mathematical Expression for Convergence}{3}{subsection.5.2}%
+\contentsline {subsection}{\numberline {\mbox {V-C}}Practical Considerations}{3}{subsection.5.3}%
+\contentsline {section}{\numberline {VI}Applications}{3}{section.6}%
+\contentsline {section}{\numberline {VII}Conclusion}{3}{section.7}%
