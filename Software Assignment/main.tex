@@ -1,0 +1,156 @@
+%iffalse           
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\usepackage{circuitikz}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+\title{Eigen Vector Calculation}
+\author{EE24BTECH11052 - RONGALI CHARAN}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\section{Introduction}
+Eigenvalues play a fundamental role in linear algebra and have applications in physics, engineering, and data science. The QR algorithm is a widely used numerical method to compute eigenvalues. The algorithm relies on the QR decomposition of a matrix, which can be efficiently computed using the Gram-Schmidt process.
+\section{Gram-Schmidt Process}
+The Gram-Schmidt process transforms a set of linearly independent vectors into an orthonormal set of vectors. Given a set of vectors $\{\vec{a_1},\vec{ a_2}, \dots, \vec{a_n}\}$, it generates an orthonormal basis $\{\vec{q_1},\vec{q_2}, \dots, \vec{q_n}\}$ satisfying:
+$$
+\vec{q_i}^T \vec{q_j} = 
+\begin{cases} 
+1 & \text{if } i = j, \\
+0 & \text{if } i \neq j.
+\end{cases}
+$$
+\subsection{Steps}
+1. Normalize $\vec{a_1}$ to get $\vec{q_1}$:
+
+$$\vec{q_1} = \frac{\vec{a_1}}{\|\vec{a_1}\|}.$$
+2. For each $a_i$, subtract its projections onto all previous $q_j$:
+   $$
+   \vec{a_i'} = \vec{a_i} - \sum_{j=1}^{i-1} (\vec{q_j}^T \vec{a_i}) \vec{q_j}.
+   $$
+   - Normalize $a_i'$ to get $q_i$:
+   $$
+   \vec{q_i} = \frac{\vec{a_i'}}{\|\vec{a_i'}\|}.
+   $$
+   The Gram-Schmidt process ensures that $\vec{q_1}, \vec{q_2}, \dots, \vec{q_n}$ are orthonormal, forming the columns of the matrix $\vec{Q}$. This process is fundamental to QR decomposition.
+3.  The columns of $\vec{Q}$ are the orthonormal vectors $ \vec{q_1}, \vec{q_2}, \dots, \vec{q_n} $.
+
+4.  The matrix $\vec{R}$ is an upper triangular matrix whose elements are the coefficients of the projections:  
+	$$\vec{R}[i, j] = \vec{q_i}^T \vec{a_j} \quad \text{for } i \leq j.$$
+ This means each entry $\vec{R}[i, j] $ corresponds to the inner product of $\vec{q_i}$ and the column $\vec{a_j}$ from the original matrix.
+
+Thus, the QR decomposition gives us two matrices:
+$$
+\vec{A} = \vec{Q}\vec{R},
+$$
+where $\vec{Q}$ is orthogonal, and $\vec{R}$ is upper triangular.
+where $\vec{Q}$ is orthogonal, and $\vec{R}$ is upper triangular.
+\section{QR Decomposition}
+
+\subsection{Definition}
+QR decomposition factors a square matrix $\vec{A}$ into:
+$$
+\vec{A} = \vec{Q}\vec{R},
+$$
+where:
+\begin{itemize}
+	\item $\vec{Q}$ is an orthogonal matrix whose columns are the orthonormal basis vectors computed using Gram-Schmidt.
+	\item $\vec{R}$ is an upper triangular matrix containing the coefficients from the projections.
+\end{itemize}
+\section{Eigenvalue Computation Using QR Algorithm}
+\subsection{Overview}
+The QR algorithm iteratively transforms a matrix into a nearly diagonal form. The eigenvalues appear on the diagonal of the transformed matrix after convergence.
+
+\subsection{Algorithm Steps}
+\begin{enumerate}
+\item Input a square matrix $\vec{A}$ .
+\item Perform QR decomposition on $\vec{A}$ to obtain $\vec{Q}$ and $\vec{R}$ using Gram-Schmidt Process.
+\item Iteratively update the matrix $\vec{A}$ to $$\vec{A} = \vec{R}\vec{Q}.$$
+\item Stop when the off-diagonal sum of $\vec{A}$ is veru negligible or tolerance threshold.
+\item After convergence, the diagonal entries of $\vec{A}$ are the eigenvalues.
+\end{enumerate}
+\subsection{Convergence Criterion}
+The iteration stops when the sum of the magnitudes of off-diagonal elements becomes smaller than a predefined tolerance. Mathematically:
+$$\text{Off-diagonal sum} = \sum_{i \neq j} |\vec{A}[i, j]| < \text{tolerance}.$$
+\section{Convergence Criteria in the QR Algorithm}
+The convergence criteria in the QR algorithm ensures that the iterative process stops when the matrix is sufficiently close to a diagonal matrix. The diagonal elements of the matrix then represent the eigenvalues. The convergence is monitored by observing the magnitude of the off-diagonal elements in the matrix.
+\subsection{Tolerance Threshold}
+The tolerance is a small positive value that determines when the off-diagonal sum is small enough to stop the algorithm. A typical value for tolerance could be $ 10^{-12} $ or $ 10^{-15} $, depending on the required accuracy.\\
+If the sum of the off-diagonal elements falls below this threshold, the algorithm is considered to have converged. At this point, the matrix is nearly diagonal, and the diagonal entries represent the eigenvalues.
+\subsection{Mathematical Expression for Convergence}
+The QR algorithm stops when:
+	$$\sum_{i \neq j} |\vec{A}[i, j]| < \text{tolerance}.$$
+This means that if the sum of the absolute values of the off-diagonal elements is smaller than the specified tolerance, the algorithm halts and the eigenvalues are taken as the diagonal elements of $\vec{A}$.
+
+\subsection{Practical Considerations}
+The algorithm's convergence can be affected by numerical errors, especially in cases of ill-conditioned matrices. In such cases, additional techniques like shifts may be applied to accelerate convergence.\\
+The QR algorithm converges faster for matrices with well-separated eigenvalues. For matrices with close eigenvalues or poor conditioning, the algorithm may require more iterations to converge.
+\section{Applications}
+The QR algorithm is commonly used in:
+\begin{itemize}
+    \item Numerical solutions to eigenvalue problems.
+    \item Principal Component Analysis (PCA) in data science.
+    \item Vibrational analysis in mechanical systems.
+\end{itemize}
+
+\section{Conclusion}
+The QR decomposition and Gram-Schmidt process provide a systematic approach for numerical eigenvalue computation. While simple to understand and implement, these methods are computationally expensive for large matrices. Optimized numerical libraries are often preferred for practical applications.
+\begin{enumerate}
+\item Code to find Eigen Values  
+\begin{lstlisting}
+   code/eigen.py
+\end{lstlisting}
+\end{enumerate}
+\end{document}
